@@ -1,0 +1,24 @@
+[package]
+name = "lrs"
+version = "0.1.0"
+edition = "2024"
+
+description = "A Reimplementation of GNU/coreutils/ls in Rust"
+license = "GPL-3.0"
+repository = "https://git.inf.fh-dortmund.de/01/calic001/lrs.git"
+homepage = "https://git.inf.fh-dortmund.de/01/calic001"
+documentation = "https://git.inf.fh-dortmund.de/01/calic001/lrs.git"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "lrs"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+derive_more = {version = "2.0.1", features = ["from"]}
+terminal_size = "0.2"
+unicode-width = "0.1"
+chrono = "0.4"
+ctrlc = "3"
